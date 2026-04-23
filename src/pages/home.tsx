@@ -27,11 +27,11 @@ export default function Home() {
             </Badge>
 
             <h1 className="text-5xl md:text-7xl font-black font-serif text-primary leading-[1.1] mb-8 tracking-tight">
-              [Enter Your Project Name Here]
+              Pet and People Safety
             </h1>
 
             <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl leading-relaxed mb-12 font-serif">
-              [Write a compelling 1-2 sentence executive summary of your project. What is the core value proposition and who is it for?]
+              Safety is becoming a major concern nowadays, but as we focus on safety, an unfortunate lack of freedom fills its spot. We have created a doorbell camera that is accessible at any time and from any place, which gives you control over entering and exiting your home. Our goal is to let our pets roam free while preventing as much risk as possible.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 pt-8 border-t border-border/60">
