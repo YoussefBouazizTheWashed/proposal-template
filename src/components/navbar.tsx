@@ -89,7 +89,7 @@ export function Navbar() {
       >
         <div className="container mx-auto px-4 sm:px-6 md:px-12 h-16 flex items-center gap-3">
           <div className="font-serif font-bold text-base tracking-tight shrink-0">
-            Pet and People Safety
+            Pet n People
           </div>
 
           <div className="flex-1 overflow-x-auto">
