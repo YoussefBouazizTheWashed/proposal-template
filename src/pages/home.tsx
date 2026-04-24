@@ -27,44 +27,37 @@ export default function Home() {
             </Badge>
 
             <h1 className="text-5xl md:text-7xl font-black font-serif text-primary leading-[1.1] mb-8 tracking-tight">
-              Pet and People Safety
+              Pet n People
             </h1>
 
             <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl leading-relaxed mb-12 font-serif">
-              Safety is becoming a major concern nowadays, but as we focus on safety, an unfortunate lack of freedom fills its spot. We have created a doorbell camera that is accessible at any time and from any place, which gives you control over entering and exiting your home. Our goal is to let our pets roam free while preventing as much risk as possible.
+              Safety is becoming a major concern nowadays, but as we focus on safety, an unfortunate lack of freedom fills its spot. We aim to fix this problem because freedom is the best gift you can give your pet.
             </p>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 pt-8 border-t border-border/60">
-              <div>
-                <h3 className="text-sm font-bold uppercase tracking-widest text-muted-foreground mb-4">Title / Product name, team member names</h3>
-                <ul className="space-y-3">
-                  <li className="flex flex-col">
-                    <span className="font-semibold text-foreground">[Team Member 1]</span>
-                    <span className="text-sm text-muted-foreground">[Role / Title]</span>
-                  </li>
-                  <li className="flex flex-col">
-                    <span className="font-semibold text-foreground">[Team Member 2]</span>
-                    <span className="text-sm text-muted-foreground">[Role / Title]</span>
-                  </li>
-                </ul>
+            <div className="pt-8 border-t border-border/60">
+              <div className="mb-6 text-sm text-muted-foreground space-y-1">
+                <p className="font-medium text-foreground">By submitting this assignment, I agree to the following:</p>
+                <p>"Aggies do not lie, cheat, or steal, or tolerate those who do."</p>
+                <p>"I have not given or received any unauthorized aid on this assignment."</p>
+                <p className="pt-2">Section: 594</p>
+                <p>Assignment: Proposal website</p>
+                <p>Date: 23 April 2026</p>
               </div>
-              <div>
-                <h3 className="text-sm font-bold uppercase tracking-widest text-muted-foreground mb-4">Project Details</h3>
-                <dl className="space-y-3 text-sm">
-                  <div className="flex justify-between border-b border-border/40 pb-2">
-                    <dt className="text-muted-foreground">Date</dt>
-                    <dd className="font-medium">[October 24, 2024]</dd>
-                  </div>
-                  <div className="flex justify-between border-b border-border/40 pb-2">
-                    <dt className="text-muted-foreground">Client / Department</dt>
-                    <dd className="font-medium">[Organization Name]</dd>
-                  </div>
-                  <div className="flex justify-between border-b border-border/40 pb-2">
-                    <dt className="text-muted-foreground">Document Status</dt>
-                    <dd className="font-medium">Draft for Review</dd>
-                  </div>
-                </dl>
-              </div>
+              <h3 className="text-sm font-bold uppercase tracking-widest text-muted-foreground mb-4">Team Members</h3>
+              <ul className="space-y-3">
+                <li className="flex flex-col">
+                  <span className="font-semibold text-foreground">Youssef Bouaziz</span>
+                  <span className="text-sm text-muted-foreground">Co-Founder</span>
+                </li>
+                <li className="flex flex-col">
+                  <span className="font-semibold text-foreground">Shariar Rafi</span>
+                  <span className="text-sm text-muted-foreground">Co-Founder</span>
+                </li>
+                <li className="flex flex-col">
+                  <span className="font-semibold text-foreground">Edward Sanchez</span>
+                  <span className="text-sm text-muted-foreground">Co-Founder</span>
+                </li>
+              </ul>
             </div>
           </div>
         </section>
@@ -73,32 +66,75 @@ export default function Home() {
           <div className="container mx-auto max-w-5xl">
             <SectionHeader
               title="Problem & Solution Requirements"
-              description="[Describe the problem the project solves or the opportunity it is taking advantage of. Include statistics or similar proving the need. What type of problem is it? What is the environment for the opportunity? Is there a timeframe?]"
+              description=""
             />
 
-            <div className="grid md:grid-cols-3 gap-8 mt-12">
+            <div className="mt-8 prose prose-slate max-w-none prose-p:text-muted-foreground prose-p:leading-relaxed">
+              <p style={{ fontFamily: '"Comic Sans MS", "Comic Sans", cursive' }}>The project solves the problem of balancing freedom with security, both for your home and your pets. The issue that comes with solving such a problem is complexity as many variables and factors need to be addressed, and while creating a product that encompasses the whole of all the possible variables would be impossible, we can quickly deduce that a lot of these issues stem from two major flaws; controlling when our pets can go inside and outside, and preventing others from accessing/destroying the pet's means of exiting and entering the house.</p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8 mt-12">
               <Card className="bg-primary/5 border-none shadow-none">
                 <CardContent className="pt-6">
-                  <div className="text-4xl font-serif font-black text-primary mb-2">[73%]</div>
-                  <p className="text-sm text-muted-foreground leading-relaxed">[Statistic showing the scale of the problem. E.g. of users abandon processes due to friction.]</p>
+                  <div className="text-2xl font-bold font-serif text-primary mb-3">Cats walk up to 3.7 km/day</div>
+                  <div className="text-xl font-semibold text-primary mb-2"><span className="text-sm font-normal text-muted-foreground">(Jensen et al., 2022)</span></div>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    A GPS tracking study of 97 companion cats in Denmark found that cats travel up to 3.7 km per day (75th percentile), with a median of 2.4 km/day and a median of 5 hours spent away from home engaging in natural roaming behaviour (Jensen et al., 2022).
+                  </p>
+                  <p className="text-sm text-muted-foreground leading-relaxed mt-3">
+                    Indoor-only cats face significantly higher rates of obesity, boredom, and behavioural problems — including aggression, house-soiling, and destructive behaviour — due to restricted movement and limited stimulation (Grigg &amp; Kogan, 2019).
+                  </p>
+                  <div className="mt-4 pt-4 border-t border-border/40 space-y-2 text-xs text-muted-foreground">
+                    <p>Grigg, E. K., &amp; Kogan, L. R. (2019). Owners' attitudes, knowledge, and care practices: Exploring the implications for domestic cat behavior and welfare in the home. <em>Animals</em>, <em>9</em>(11), 978. https://doi.org/10.3390/ani9110978</p>
+                    <p>Jensen, H. A., Meilby, H., Nielsen, S. S., &amp; Sandøe, P. (2022). Movement patterns of roaming companion cats in Denmark—A study based on GPS tracking. <em>Animals</em>, <em>12</em>(14), 1748. https://doi.org/10.3390/ani12141748</p>
+                  </div>
                 </CardContent>
               </Card>
               <Card className="bg-primary/5 border-none shadow-none">
                 <CardContent className="pt-6">
-                  <div className="text-4xl font-serif font-black text-primary mb-2">[$2.4M]</div>
-                  <p className="text-sm text-muted-foreground leading-relaxed">[Financial impact of the current problem annually within the target market or organization.]</p>
+                  <div className="text-2xl font-bold font-serif text-primary mb-3">Dogs' BCS drops significantly after 8 weeks outdoors</div>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    A 2024 study published in <em>Scientific Reports</em> found that just eight weeks of structured outdoor exercise produced a statistically significant reduction in dogs' body condition scores (BCS) without any changes to diet (Smedberg et al., 2024). BCS is measured on a 9-point veterinary scale where 1–3 = underweight, 4–5 = ideal weight, 6 = slight overweight, 7 = overweight, and 8–9 = obese — meaning even a one-point shift represents a clinically meaningful change in a dog's health category.
+                  </p>
+                  <div className="mt-4 pt-4 border-t border-border/40 space-y-2 text-xs text-muted-foreground">
+                    <p>Smedberg, M., Spörndly-Nees, S., Kallings, L. V., Lindqvist, A., &amp; Rydén, A. (2024). A pilot study of a joint outdoor exercise program for dog owners and dogs. <em>Scientific Reports</em>, <em>14</em>, 14321. https://doi.org/10.1038/s41598-024-65033-0</p>
+                  </div>
                 </CardContent>
               </Card>
               <Card className="bg-primary/5 border-none shadow-none">
                 <CardContent className="pt-6">
-                  <div className="text-4xl font-serif font-black text-primary mb-2">[10x]</div>
-                  <p className="text-sm text-muted-foreground leading-relaxed">[Growth metric showing how the problem is compounding over time if left unaddressed.]</p>
+                  <div className="text-2xl font-bold font-serif text-primary mb-3">Only 71% of lost dogs & 53% of lost cats are recovered</div>
+                  <div className="text-xl font-semibold text-primary mb-2"><span className="text-sm font-normal text-muted-foreground">(Lord et al., 2007)</span></div>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    A peer-reviewed study of 187 lost dogs and 138 lost cats found that only 71% of dogs and 53% of cats were ever recovered by their owners, with median recovery times of 2 days for dogs and 5 days for cats (Lord et al., 2007).
+                  </p>
+                  <div className="mt-4 pt-4 border-t border-border/40 space-y-2 text-xs text-muted-foreground">
+                    <p>Lord, L. K., Wittum, T. E., Ferketich, A. K., Funk, J. A., &amp; Rajala-Schultz, P. J. (2007). Search and identification methods that owners use to find a lost dog. <em>Journal of the American Veterinary Medical Association</em>, <em>230</em>(2), 211–216. https://doi.org/10.2460/javma.230.2.211</p>
+                    <p>Lord, L. K., Wittum, T. E., Ferketich, A. K., Funk, J. A., &amp; Rajala-Schultz, P. J. (2007). Search and identification methods that owners use to find a lost cat. <em>Journal of the American Veterinary Medical Association</em>, <em>230</em>(2), 217–220. https://doi.org/10.2460/javma.230.2.217</p>
+                  </div>
+                </CardContent>
+              </Card>
+              <Card className="bg-primary/5 border-none shadow-none">
+                <CardContent className="pt-6">
+                  <div className="text-2xl font-bold font-serif text-primary mb-3">Back doors are burglars' #1 entry point at 38.7%</div>
+                  <div className="text-xl font-semibold text-primary mb-2"><span className="text-sm font-normal text-muted-foreground">(Park &amp; Lee, 2021)</span></div>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Research published in the <em>Journal of Environmental Psychology</em> reveals that the back door was the route chosen most frequently by participants to enter a building, selected in 38.7% of cases, and that the choice of intrusion routes was strongly affected by physical features related to the ease of penetration (Park &amp; Lee, 2021).
+                  </p>
+                  <p className="text-sm text-muted-foreground leading-relaxed mt-3">
+                    Burglars are not choosing entry points at random — they are actively seeking the path of least resistance, and the back door is their first choice. A doggy door installed in a back door, as is common practice, directly compounds this vulnerability by introducing a permanent, unmonitored opening into the single most targeted entry point in a home. When ease of access is the primary factor driving a burglar's decision, any structural weakness in a back door — including a pet flap — becomes an invitation.
+                  </p>
+                  <div className="mt-4 pt-4 border-t border-border/40 space-y-2 text-xs text-muted-foreground">
+                    <p>Park, S. Y., &amp; Lee, K. H. (2021). Burglars' choice of intrusion routes: A virtual reality experimental study. <em>Journal of Environmental Psychology</em>, <em>74</em>, 101582. https://doi.org/10.1016/j.jenvp.2021.101582</p>
+                  </div>
                 </CardContent>
               </Card>
             </div>
 
             <div className="mt-12 prose prose-slate max-w-none prose-p:text-muted-foreground prose-p:leading-relaxed">
-              <p>[Provide deeper narrative context here. Expand on the statistics above with qualitative insights. Who is suffering from this problem? How are they currently trying to solve it? Explain the limitations of current solutions and why a new approach is necessary.]</p>
+              <p>We all love our pets, but most animals do prefer being outside as opposed to being trapped inside the confines of a home. Of course this would vary depending on the type of animal and their personality. However many studies have shown that being outside is beneficial for your fluffy friends! This, however, brings up a problem — many pets go missing every year and although being outside is beneficial it can also cause you to lose a best friend.</p>
+              <p>This isn't even mentioning how a lot of current solutions for autonomous entrance and exiting of a household for the pet are flawed in many ways. Standard doggy doors are flimsy and easy to enter and exit, making them a prime entry point for unwanted guests and an easy exit point for pets and small children who shouldn't be going out at night or during a storm.</p>
+              <p>Electronic doggy doors, however, require some sort of identification attached to them so they open for the pet — but this usually comes in the form of a collar which can be easily lost or destroyed while holding said identification. Microchips are also not viable with our current technology through a camera or sensor due to range limitations.</p>
             </div>
           </div>
         </section>
@@ -107,8 +143,13 @@ export default function Home() {
           <div className="container mx-auto max-w-5xl">
             <SectionHeader
               title="Solution"
-              description="[Write the solution, explain the scope, and how it will be delivered. Stay focused on what you are selling; one solution only. Communicate the idea clearly.]"
+              description=""
             />
+
+            <div className="mt-8 prose prose-slate max-w-none prose-p:text-muted-foreground prose-p:leading-relaxed">
+              <p>Our solution is to create an app that is specifically tied to our product — a specialized pressure plate that doubles as a rug embedded in your front porch. We will also install a sliding door as a doggy door and a camera that acts as surveillance and activates whenever the pressure plate is triggered. Our app will also allow you to access any remote cameras around and within your house if you have any installed.</p>
+              <p>The app will allow you to set a certain weight threshold that will automatically open the sliding doggy door, ensuring only your pet can trigger it. For safety reasons, if the detected weight changes more than twice within 5 minutes, the app will send you a notification and give you the option to temporarily lock the door and monitor the live camera feed.</p>
+            </div>
 
             <div className="grid md:grid-cols-2 gap-16 items-center mt-16">
               <div className="order-2 md:order-1 space-y-8">
@@ -142,14 +183,13 @@ export default function Home() {
               </div>
 
               <div className="order-1 md:order-2">
-                <div className="aspect-square md:aspect-[4/3] bg-white rounded-xl border border-border shadow-lg flex items-center justify-center p-8 relative overflow-hidden group">
-                  <div className="absolute inset-0 bg-slate-100/50 mix-blend-multiply pointer-events-none"></div>
-                  <div className="text-center relative z-10">
-                    <div className="w-20 h-20 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
-                      <Target className="w-10 h-10 text-primary" />
-                    </div>
-                    <p className="font-medium text-muted-foreground font-serif italic">[Insert High-Level Architecture Diagram,<br /> Mockup, or Product Visual Here]</p>
-                  </div>
+                <div className="bg-white rounded-xl border border-border shadow-lg overflow-hidden">
+                  <img
+                    src="/architecture.jpg"
+                    alt="Pet n People architecture sketch showing pressure plate, sliding doggy door, camera, and mobile app"
+                    className="w-full h-auto object-contain"
+                  />
+                  <p className="text-xs text-muted-foreground text-center py-2 px-4 border-t border-border">Figure 1. System architecture sketch — Pet n People</p>
                 </div>
               </div>
             </div>
