@@ -200,18 +200,39 @@ export default function Home() {
           <div className="container mx-auto max-w-5xl">
             <SectionHeader
               title="Vision / Goal"
-              description="[Bulleted list acceptable, but other formats equally acceptable. State the vision of the project and its goals. Be specific with measurable goals. Think: action-oriented, realistic and based in time.]"
+              description=""
             />
+
+            <div className="mt-8 prose prose-slate max-w-none prose-p:text-muted-foreground prose-p:leading-relaxed prose-p:text-lg">
+              <p>We strive to create a product that will ease the burdens of pet owners. To accomplish this we need to…</p>
+            </div>
 
             <div className="bg-primary text-primary-foreground rounded-2xl p-8 md:p-12 mt-12 shadow-xl">
               <h3 className="text-2xl font-serif font-bold mb-8">Strategic Objectives</h3>
               <ul className="space-y-6">
-                {[1, 2, 3, 4].map((item) => (
-                  <li key={item} className="flex gap-4 items-start">
+                {[
+                  {
+                    title: "Research",
+                    desc: "Research the material makeup of similar outdoor camera products in order to know what materials to be seeking."
+                  },
+                  {
+                    title: "Prototype",
+                    desc: "Draw up prototype sketches and send the sketches to factories capable of procuring the necessary materials to construct the prototypes."
+                  },
+                  {
+                    title: "Testing and Feedback",
+                    desc: "Send prototypes for testing in order to gain feedback and make final sketches based on that feedback."
+                  },
+                  {
+                    title: "Shipping",
+                    desc: "Contract factories to produce our product and logistics to ship our products to the homes of customers."
+                  }
+                ].map((item, idx) => (
+                  <li key={idx} className="flex gap-4 items-start">
                     <CheckCircle2 className="w-6 h-6 text-primary-foreground/70 shrink-0 mt-0.5" />
                     <div>
-                      <strong className="block text-lg mb-1">[Objective {item} Title]</strong>
-                      <span className="text-primary-foreground/80 leading-relaxed">[Detailed description of the objective. E.g., Increase user retention by 25% within the first 6 months post-launch.]</span>
+                      <strong className="block text-lg mb-1">{item.title}</strong>
+                      <span className="text-primary-foreground/80 leading-relaxed">{item.desc}</span>
                     </div>
                   </li>
                 ))}
@@ -224,15 +245,15 @@ export default function Home() {
           <div className="container mx-auto max-w-5xl">
             <SectionHeader
               title="Timeframe & Deliverables"
-              description="[What is the amount of time you need to complete the goals? What will be delivered throughout the project lifecycle to the owners, investors, stakeholders, or others? Be specific and consider prototypes, periodic reports, alpha and beta testing results, etc.]"
+              description=""
             />
 
             <div className="mt-16 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-border before:to-transparent">
               {[
-                { phase: "Phase 1: Discovery", time: "Weeks 1-2", desc: "[User research, requirements gathering, initial architecture planning.]" },
-                { phase: "Phase 2: Design", time: "Weeks 3-5", desc: "[Wireframing, prototyping, user testing, and final UI/UX approval.]" },
-                { phase: "Phase 3: Development", time: "Weeks 6-12", desc: "[Core system implementation, frontend build, API integrations.]" },
-                { phase: "Phase 4: Launch", time: "Weeks 13-14", desc: "[QA testing, security review, beta release, and final deployment.]" }
+                { phase: "Phase 1: Research of Materials", time: "6 months", desc: "Gain an overview of the necessary materials." },
+                { phase: "Phase 2: Prototype Sketches", time: ">1 year", desc: "Draw up prototypes to gain interest from potential investors and send the sketches to factories that are willing to cooperate." },
+                { phase: "Phase 3: Testing and Feedback", time: "2 years", desc: "Gain feedback and procure reports for investors/stakeholders." },
+                { phase: "Phase 4: Production and Shipping", time: "1 year", desc: "Ship the final product to customers." }
               ].map((item, i) => (
                 <div key={i} className="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active mb-8 md:mb-12 last:mb-0">
                   <div className="flex items-center justify-center w-10 h-10 rounded-full border border-white bg-primary text-primary-foreground shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 shadow z-10">
@@ -255,11 +276,11 @@ export default function Home() {
           <div className="container mx-auto max-w-5xl">
             <SectionHeader
               title="Resources & Budget"
-              description="[Lists acceptable, but descriptions of resource needs and purposes also required. Table preferred for budget. Detail the type of resources, the quantity, and add notes as needed for clarity. Resources cost money; estimate the financial requirements here.]"
+              description=""
             />
 
-            <div className="grid md:grid-cols-5 gap-12 mt-12">
-              <div className="md:col-span-3">
+            <div className="mt-12">
+              <div>
                 <h3 className="text-xl font-bold font-serif mb-6">Estimated Budget</h3>
                 <div className="overflow-x-auto rounded-xl border border-border shadow-sm">
                   <table className="w-full text-left border-collapse">
@@ -272,55 +293,36 @@ export default function Home() {
                     </thead>
                     <tbody className="divide-y divide-border">
                       <tr>
-                        <td className="py-4 px-6 font-medium">[Personnel]</td>
-                        <td className="py-4 px-6 text-muted-foreground text-sm">[Engineering, Design, PM]</td>
-                        <td className="py-4 px-6 text-right font-medium">[$00,000]</td>
+                        <td className="py-4 px-6 font-medium">Personnel</td>
+                        <td className="py-4 px-6 text-muted-foreground text-sm">Engineering, Design, PM</td>
+                        <td className="py-4 px-6 text-right font-medium">$37,500,000</td>
                       </tr>
                       <tr>
-                        <td className="py-4 px-6 font-medium">[Software / Tools]</td>
-                        <td className="py-4 px-6 text-muted-foreground text-sm">[Cloud infrastructure, licenses]</td>
-                        <td className="py-4 px-6 text-right font-medium">[$0,000]</td>
+                        <td className="py-4 px-6 font-medium">Software / Tools</td>
+                        <td className="py-4 px-6 text-muted-foreground text-sm">Microsoft Azure license</td>
+                        <td className="py-4 px-6 text-right font-medium">$8,064</td>
                       </tr>
                       <tr>
-                        <td className="py-4 px-6 font-medium">[Marketing]</td>
-                        <td className="py-4 px-6 text-muted-foreground text-sm">[Launch campaigns, ads]</td>
-                        <td className="py-4 px-6 text-right font-medium">[$0,000]</td>
+                        <td className="py-4 px-6 font-medium">Marketing</td>
+                        <td className="py-4 px-6 text-muted-foreground text-sm">Launch campaigns, ads</td>
+                        <td className="py-4 px-6 text-right font-medium">$40,000</td>
                       </tr>
                       <tr>
-                        <td className="py-4 px-6 font-medium">[Contingency]</td>
-                        <td className="py-4 px-6 text-muted-foreground text-sm">[10% buffer for overruns]</td>
-                        <td className="py-4 px-6 text-right font-medium">[$0,000]</td>
+                        <td className="py-4 px-6 font-medium">Materials</td>
+                        <td className="py-4 px-6 text-muted-foreground text-sm">Raw materials (per 100,000 kg)</td>
+                        <td className="py-4 px-6 text-right font-medium">$1,566,000</td>
                       </tr>
                     </tbody>
                     <tfoot>
                       <tr className="bg-slate-50/50">
-                        <td colSpan={2} className="py-4 px-6 font-bold text-right">Total Estimated Budget</td>
-                        <td className="py-4 px-6 text-right font-bold text-primary text-lg">[$00,000]</td>
+                        <td colSpan={2} className="py-4 px-6 font-bold text-right">Total Estimated Budget (annual cost)</td>
+                        <td className="py-4 px-6 text-right font-bold text-primary text-lg">$39,114,064</td>
                       </tr>
                     </tfoot>
                   </table>
                 </div>
               </div>
 
-              <div className="md:col-span-2 space-y-8">
-                <div>
-                  <h3 className="text-xl font-bold font-serif mb-6">Required Resources</h3>
-                  <ul className="space-y-4">
-                    <li className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
-                      <p className="text-sm text-muted-foreground leading-relaxed"><strong className="text-foreground">[Role 1]</strong>: [Description of responsibilities and time commitment]</p>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
-                      <p className="text-sm text-muted-foreground leading-relaxed"><strong className="text-foreground">[Role 2]</strong>: [Description of responsibilities and time commitment]</p>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 rounded-full bg-primary mt-2 shrink-0" />
-                      <p className="text-sm text-muted-foreground leading-relaxed"><strong className="text-foreground">[Technology]</strong>: [Specific API access, hardware, or datasets needed]</p>
-                    </li>
-                  </ul>
-                </div>
-              </div>
             </div>
           </div>
         </section>
@@ -329,11 +331,22 @@ export default function Home() {
           <div className="container mx-auto max-w-5xl">
             <SectionHeader
               title="Risks & Implications"
-              description="[Consider both investor ($) and society loss. Write down what might happen, how it may occur, and what to do. If anything is going to stop deliverables from being delivered, this is where the information goes.]"
+              description=""
             />
 
             <div className="grid md:grid-cols-2 gap-6 mt-12">
-              {[1, 2, 3, 4].map((i) => (
+              {[
+                {
+                  title: "Global supply chain disruptions",
+                  description: "A big concern for a product that requires the procurement of materials across the globe is interruptions in the global supply chain, be it due to conflicts, tariffs, embargos etc.",
+                  mitigation: "To combat this, we must diversify our supply chains in order to ease the impacts of such issues and continue to produce our product. This, of course, will come at an increased cost which is unfortunately unavoidable."
+                },
+                {
+                  title: "Investor loss",
+                  description: "There is the concern of investors potentially losing interest in the project and leaving, leading to a loss of funding.",
+                  mitigation: "To try to ease this, we will also diversify our pool of investors."
+                }
+              ].map((risk, i) => (
                 <Card key={i} className="border-border shadow-sm">
                   <CardContent className="pt-6">
                     <div className="flex items-start gap-4">
@@ -341,11 +354,11 @@ export default function Home() {
                         <AlertTriangle className="w-5 h-5" />
                       </div>
                       <div>
-                        <h4 className="font-bold mb-2">[Risk Factor {i}]</h4>
-                        <p className="text-sm text-muted-foreground mb-4">[Description of what could go wrong and its potential impact on the project timeline or success.]</p>
+                        <h4 className="font-bold mb-2">{risk.title}</h4>
+                        <p className="text-sm text-muted-foreground mb-4">{risk.description}</p>
                         <div className="bg-slate-50 rounded p-3 text-sm border border-border">
                           <strong className="block text-xs uppercase tracking-wider text-muted-foreground mb-1">Mitigation Plan</strong>
-                          [How you will prevent this risk or handle it if it occurs.]
+                          {risk.mitigation}
                         </div>
                       </div>
                     </div>
@@ -360,17 +373,30 @@ export default function Home() {
           <div className="container mx-auto max-w-5xl">
             <SectionHeader
               title="Success Criteria"
-              description="[Can be listed, but must be explained well. How do you define success? Be careful and specific in these details. It’s helpful to list five key success criteria against which the project will be measured.]"
+              description=""
             />
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-              {[1, 2, 3, 4, 5].map((i) => (
+              {[
+                {
+                  title: "Monetary Success",
+                  desc: "A fairly obvious metric is profitability. Turning a profit will allow for long term funding for the production of this product, making sure that we will be able to continue being to able to meet customer demand."
+                },
+                {
+                  title: "Customer Satisfaction",
+                  desc: "Satisfied customers will ensure that there is a pool of individuals willing to give us money and, in turn, allow for its long term existence."
+                },
+                {
+                  title: "Shareholder Satisfaction",
+                  desc: "Ensuring that we will be able to make a profit will ensure that investors are willing to stick with our product and allow for further funding."
+                }
+              ].map((metric, i) => (
                 <div key={i} className="bg-white border border-border rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow">
                   <div className="w-10 h-10 bg-primary/10 rounded-lg flex items-center justify-center mb-4 text-primary">
                     <BarChart3 className="w-5 h-5" />
                   </div>
-                  <h4 className="font-bold font-serif mb-2">[Metric {i}]</h4>
-                  <p className="text-sm text-muted-foreground leading-relaxed">[Target baseline vs. expected outcome. E.g., Reduce load time from 3s to &lt;1s.]</p>
+                  <h4 className="font-bold font-serif mb-2">{metric.title}</h4>
+                  <p className="text-sm text-muted-foreground leading-relaxed">{metric.desc}</p>
                 </div>
               ))}
             </div>
